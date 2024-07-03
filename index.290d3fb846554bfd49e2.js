@@ -236,16 +236,16 @@ var Header = function Header() {
 
 
 
-var Footer = function Footer() {
-  var date = new Date();
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("footer", {
-    className: Footer_module.footer,
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-      children: ["\xA9 2024-", date.getFullYear(), " | Leonardo de Lellis Rossi"]
-    })
-  });
-};
-;// CONCATENATED MODULE: ./src/site/components/Footer/index.ts
+//var Footer = function Footer() {
+//  var date = new Date();
+//  return /*#__PURE__*/(0,jsx_runtime.jsx)("footer", {
+//    className: Footer_module.footer,
+//    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
+//      children: ["\xA9 2024-", date.getFullYear(), " | Leonardo de Lellis Rossi"]
+//    })
+//  });
+//};
+//;// CONCATENATED MODULE: ./src/site/components/Footer/index.ts
 
 ;// CONCATENATED MODULE: ./src/site/components/GenerateSection/GenerateSection.module.styl
 // extracted by mini-css-extract-plugin
