@@ -108,128 +108,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var Donate = function Donate() {
-  var _useTranslation = (0,useTranslation/* useTranslation */.$)(),
-    t = _useTranslation.t;
-  var _useState = (0,react.useState)(false),
-    isCodeVisible = _useState[0],
-    setIsCodeVisible = _useState[1];
-  var trackClick = function trackClick(_ref) {
-    var category = _ref.category,
-      type = _ref.type;
-    return function () {
-      if (true) {
-        var pushData = /*#__PURE__*/function () {
-          var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var ReactGA;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    _context.next = 2;
-                    return __webpack_require__.e(/* import() */ 516).then(__webpack_require__.bind(__webpack_require__, 1516));
-                  case 2:
-                    ReactGA = _context.sent;
-                    ReactGA.ga('send', 'event', category, 'click', type);
-                  case 4:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee);
-          }));
-          return function pushData() {
-            return _ref2.apply(this, arguments);
-          };
-        }();
-        pushData();
-      }
-    };
-  };
-  var handleCopy = function handleCopy() {
-    (0,react_toastify_esm/* toast */.Am)(t(app_namespaceObject.sY.d1));
-  };
-  var toggleCodeVisibility = function toggleCodeVisibility() {
-    setIsCodeVisible(!isCodeVisible);
-  };
-  var handleClick = function handleClick(trackInfo) {
-    return function () {
-      trackClick(trackInfo)();
-      toggleCodeVisibility();
-    };
-  };
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    className: "donation",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("ul", {
-      className: Donation_module.list + " " + (isCodeVisible ? Donation_module.blur : ''),
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          className: Donation_module.button + " " + Donation_module.buttonStar,
-          onClick: trackClick({
-            category: 'Star',
-            type: 'generate-validade-cpf'
-          }),
-          "aria-label": t(app_namespaceObject.HC.qN),
-          "data-footnote": t(app_namespaceObject.HC.qN),
-          href: "https://github.com/tiagoporto/gerador-validador-cpf/stargazers",
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("svg", {
-            width: "14",
-            height: "16",
-            viewBox: "0 0 14 16",
-            version: "1.1",
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
-              d: "M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
-            })
-          })
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          className: Donation_module.button + " " + Donation_module.buttonPaypal,
-          onClick: trackClick({
-            category: 'Donate',
-            type: 'Paypal generate-validade-cpf'
-          }),
-          "aria-label": t(app_namespaceObject.HC.zP),
-          "data-footnote": t(app_namespaceObject.HC.zP),
-          href: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YTDUQ8RZ2G4Q8&lc=BR&item_name=tiagoporto&item_number=geradorcpf&currency_code=BRL&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted",
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: "PayPal"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)((lib_default()), {
-          text: "14iqQcwYPLBceRURHuFosGTDXxMmt3cLDp",
-          onCopy: handleCopy,
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-            className: Donation_module.button + " " + Donation_module.buttonBitcoin,
-            onClick: handleClick({
-              category: 'Donate',
-              type: 'Bitcoin generate-validate-cpf'
-            }),
-            "aria-label": t(app_namespaceObject.HC.yu),
-            "data-footnote": t(app_namespaceObject.HC.yu),
-            children: "Bitcoin"
-          })
-        })
-      })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      className: Code_module.codeBox,
-      style: {
-        display: isCodeVisible ? 'block' : 'none'
-      },
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("img", {
-        role: "presentation",
-        alt: "QRCode Bitcoin Wallet",
-        src: BTCQR,
-        onKeyPress: toggleCodeVisibility,
-        onClick: toggleCodeVisibility,
-        className: Code_module.code + " " + (isCodeVisible ? Code_module.showCode : Code_module.hideCode)
-      })
-    })]
-  });
-};
+
 ;// CONCATENATED MODULE: ./src/site/components/Donate/index.ts
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url-search-params.js
@@ -320,7 +199,7 @@ var Header = function Header() {
   return /*#__PURE__*/(0,jsx_runtime.jsxs)("header", {
     className: Header_module.panel,
     children: [/*#__PURE__*/(0,jsx_runtime.jsx)(ChangeLocale, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(GithubCorner/* default */.Z, {
-      href: "https://github.com/tiagoporto/gerador-validador-cpf/",
+      href: "https://github.com/leolellisr/gerador-validador-cpf",
       size: 80,
       bannerColor: "#fff",
       octoColor: "#155078",
@@ -362,7 +241,7 @@ var Footer = function Footer() {
   return /*#__PURE__*/(0,jsx_runtime.jsx)("footer", {
     className: Footer_module.footer,
     children: /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
-      children: ["\xA9 2014-", date.getFullYear(), " | Tiago Porto"]
+      children: ["\xA9 2024-", date.getFullYear(), " | Leonardo de Lellis Rossi"]
     })
   });
 };
@@ -820,9 +699,9 @@ var App = function App() {
 // EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/context.js + 1 modules
 var context = __webpack_require__(7031);
 ;// CONCATENATED MODULE: ./src/site/locales/en/app.json
-var locales_en_app_namespaceObject = JSON.parse('{"app":{"title":"Gerador e validador de CPF Open-Source | Tiago Porto","description":"Gerador e validador de CPF, open-source JS lib to generate and validate CPF.","keywords":"cpf,gerar,gerador,generator,generates,validador,valida,validates,online"},"header":{"libInfo":"JS open-source lib to generate and validate CPF.","projectPageGithub":"Github project page"},"validate":{"title":"Validate","insertCPF":"Insert CPF"},"generate":{"title":"Generate","cpfGenerated":"Generated CPF"},"info":{"algorithm":"Implements the follow <0>algorithm</0>.","disclaimer":"Lib available to assist developers in software testing, doesn\'t have link with \\"Receita Federal do Brasil\\".","cpfByState":"The last digit before verifiers (last 2 digits), corresponds with the brasilian state were CPF was issued.","codeByState":"Code by brasilian states:","example":"Example: CPF <0>XXX.XXX.XX8-XX</0>, number 8 corresponds to São Paulo state.","stateCode1":"1. Distrito Federal, Goiás, Mato Grosso do Sul and Tocantins;","stateCode2":"2. Pará, Amazonas, Acre, Amapá, Rondônia and Roraima;","stateCode3":"3. Ceará, Maranhão and Piauí;","stateCode4":"4. Pernambuco, Rio Grande do Norte, Paraíba and Alagoas;","stateCode5":"5. Bahia and Sergipe;","stateCode6":"6. Minas Gerais;","stateCode7":"7. Rio de Janeiro and Espírito Santo;","stateCode8":"8. São Paulo;","stateCode9":"9. Paraná and Santa Catarina;","stateCode10":"0. Rio Grande do Sul.","disclaimerValidCPF":"Valid CPF doesn\'t mean is registered or is active. For those informations, check <0>Secretaria da Receita Federal do Brasil</0>."},"donate":{"leaveStar":"Leave a ★","contributePaypal":"Contribute (Paypal)","contributeBitcoin":"Contribute (bitcoin)"},"messages":{"copied":"Copied!","cpfCopied":"CPF Copied!","validCPF":"CPF Valid","invalidCPF":"CPF Invalid","walletCopied":"Wallet copied!","incomplete":"incomplete"}}');
+var locales_en_app_namespaceObject = JSON.parse('{"app":{"title":"Gerador e validador de CPF Open-Source | Leonardo de Lellis Rossi","description":"Gerador e validador de CPF, open-source JS lib to generate and validate CPF.","keywords":"cpf,gerar,gerador,generator,generates,validador,valida,validates,online"},"header":{"libInfo":"JS open-source lib to generate and validate CPF.","projectPageGithub":"Github project page"},"validate":{"title":"Validate","insertCPF":"Insert CPF"},"generate":{"title":"Generate","cpfGenerated":"Generated CPF"},"info":{"algorithm":"Implements the follow <0>algorithm</0>.","disclaimer":"Lib available to assist developers in software testing, doesn\'t have link with \\"Receita Federal do Brasil\\".","cpfByState":"The last digit before verifiers (last 2 digits), corresponds with the brasilian state were CPF was issued.","codeByState":"Code by brasilian states:","example":"Example: CPF <0>XXX.XXX.XX8-XX</0>, number 8 corresponds to São Paulo state.","stateCode1":"1. Distrito Federal, Goiás, Mato Grosso do Sul and Tocantins;","stateCode2":"2. Pará, Amazonas, Acre, Amapá, Rondônia and Roraima;","stateCode3":"3. Ceará, Maranhão and Piauí;","stateCode4":"4. Pernambuco, Rio Grande do Norte, Paraíba and Alagoas;","stateCode5":"5. Bahia and Sergipe;","stateCode6":"6. Minas Gerais;","stateCode7":"7. Rio de Janeiro and Espírito Santo;","stateCode8":"8. São Paulo;","stateCode9":"9. Paraná and Santa Catarina;","stateCode10":"0. Rio Grande do Sul.","disclaimerValidCPF":"Valid CPF doesn\'t mean is registered or is active. For those informations, check <0>Secretaria da Receita Federal do Brasil</0>."},"donate":{"leaveStar":"Leave a ★","contributePaypal":"Contribute (Paypal)","contributeBitcoin":"Contribute (bitcoin)"},"messages":{"copied":"Copied!","cpfCopied":"CPF Copied!","validCPF":"CPF Valid","invalidCPF":"CPF Invalid","walletCopied":"Wallet copied!","incomplete":"incomplete"}}');
 ;// CONCATENATED MODULE: ./src/site/locales/br/app.json
-var br_app_namespaceObject = JSON.parse('{"app":{"title":"Gerador e validador de CPF Open-Source | Tiago Porto","description":"Gerador e validador de CPF, biblioteca JS open-source para gerar e validar CPF.","keywords":"cpf,gerar,gerador,generator,generates,validador,valida,validates,online"},"header":{"libInfo":"Lib JS open-source para gerar e validar CPF.","projectPageGithub":"Página do projeto no github"},"validate":{"title":"Validar","insertCPF":"Insira o CPF"},"generate":{"title":"Gerar","cpfGenerated":"CPF gerado"},"info":{"algorithm":"Utiliza o seguinte <0>algoritmo</0>.","disclaimer":"Lib disponível para auxiliar desenvolvedores em testes de software, não possui qualquer vínculo com a Receita Federal do Brasil.","cpfByState":"O CPF guarda o estado brasileiro de onde foi emitido, esse número corresponde ao último algarismo anterior aos dois dígitos verificadores.","codeByState":"Códigos correspondentes aos estados brasileiros:","example":"Exemplo: CPF <0>XXX.XXX.XX8-XX</0>, o número 8 corresponde ao estado de São Paulo.","stateCode1":"1. Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins;","stateCode2":"2. Pará, Amazonas, Acre, Amapá, Rondônia e Roraima;","stateCode3":"3. Ceará, Maranhão e Piauí;","stateCode4":"4. Pernambuco, Rio Grande do Norte, Paraíba e Alagoas;","stateCode5":"5. Bahia e Sergipe;","stateCode6":"6. Minas Gerais;","stateCode7":"7. Rio de Janeiro e Espírito Santo;","stateCode8":"8. São Paulo;","stateCode9":"9. Paraná e Santa Catarina;","stateCode10":"0. Rio Grande do Sul.","disclaimerValidCPF":"Um CPF válido não significa que ele exista no Cadastro Nacional de Pessoas Físicas, nem que esteja ativo ou com situação cadastral regular. Para conferir tais dados, consulte o site oficial da <0>Secretaria da Receita Federal do Brasil</0>."},"donate":{"leaveStar":"Deixe um ★","contributePaypal":"Contribua pelo Paypal","contributeBitcoin":"Contribua por bitcoin"},"messages":{"copied":"Copiado!","cpfCopied":"CPF copiado!","validCPF":"CPF Válido","invalidCPF":"CPF Inválido","walletCopied":"Wallet copiado!","incomplete":"incompleto"}}');
+var br_app_namespaceObject = JSON.parse('{"app":{"title":"Gerador e validador de CPF Open-Source | Leonardo de Lellis Rossi","description":"Gerador e validador de CPF, biblioteca JS open-source para gerar e validar CPF.","keywords":"cpf,gerar,gerador,generator,generates,validador,valida,validates,online"},"header":{"libInfo":"Lib JS open-source para gerar e validar CPF.","projectPageGithub":"Página do projeto no github"},"validate":{"title":"Validar","insertCPF":"Insira o CPF"},"generate":{"title":"Gerar","cpfGenerated":"CPF gerado"},"info":{"algorithm":"Utiliza o seguinte <0>algoritmo</0>.","disclaimer":"Lib disponível para auxiliar desenvolvedores em testes de software, não possui qualquer vínculo com a Receita Federal do Brasil.","cpfByState":"O CPF guarda o estado brasileiro de onde foi emitido, esse número corresponde ao último algarismo anterior aos dois dígitos verificadores.","codeByState":"Códigos correspondentes aos estados brasileiros:","example":"Exemplo: CPF <0>XXX.XXX.XX8-XX</0>, o número 8 corresponde ao estado de São Paulo.","stateCode1":"1. Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins;","stateCode2":"2. Pará, Amazonas, Acre, Amapá, Rondônia e Roraima;","stateCode3":"3. Ceará, Maranhão e Piauí;","stateCode4":"4. Pernambuco, Rio Grande do Norte, Paraíba e Alagoas;","stateCode5":"5. Bahia e Sergipe;","stateCode6":"6. Minas Gerais;","stateCode7":"7. Rio de Janeiro e Espírito Santo;","stateCode8":"8. São Paulo;","stateCode9":"9. Paraná e Santa Catarina;","stateCode10":"0. Rio Grande do Sul.","disclaimerValidCPF":"Um CPF válido não significa que ele exista no Cadastro Nacional de Pessoas Físicas, nem que esteja ativo ou com situação cadastral regular. Para conferir tais dados, consulte o site oficial da <0>Secretaria da Receita Federal do Brasil</0>."},"donate":{"leaveStar":"Deixe um ★","contributePaypal":"Contribua pelo Paypal","contributeBitcoin":"Contribua por bitcoin"},"messages":{"copied":"Copiado!","cpfCopied":"CPF copiado!","validCPF":"CPF Válido","invalidCPF":"CPF Inválido","walletCopied":"Wallet copiado!","incomplete":"incompleto"}}');
 ;// CONCATENATED MODULE: ./src/site/locales/index.ts
 // eslint-disable-next-line import/no-webpack-loader-syntax
 

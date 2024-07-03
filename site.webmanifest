@@ -28,6 +28,6 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "https://tiagoporto.github.io/gerador-validador-cpf/",
+  "start_url": "https://github.com/leolellisr/gerador-validador-cpf",
   "display": "standalone"
 }
