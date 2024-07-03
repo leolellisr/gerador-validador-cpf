@@ -1,1 +1,0 @@
-export { GenerateSection } from './GenerateSection'

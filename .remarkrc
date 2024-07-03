@@ -1,7 +1,0 @@
-{
-  "plugins": [
-    "validate-links",
-    "lint-no-dead-urls",
-    "lint-no-url-trailing-slash"
-  ]
-}
